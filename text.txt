@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char    *ft_substr(const char *s, unsigned int start, size_t len)
+{
+    size_t  i;
+    size_t  l;
+    char    *ptr;
+
+    if (!s)
+        return (NULL);
+
+    l = strlen (s);
+    if (start >= l)
+        len = 0;
+    else if (len > l - start)
+        len = l - start;
+
+    ptr = malloc (sizeof(char) * len + 1);
+    if (ptr == NULL)
+        return (NULL);
+
+    i = 0;
+    while (i < len)
+    {
+        ptr[i] = s[start + i];
+        i++;
+    }
+    ptr[i] = '\0';
+    return (ptr);
+}
+
+int main(void)
+{
+    char *res = ft_substr("hello world", 6, 5);
+    printf("%s", res);
+    free (res);
+}
