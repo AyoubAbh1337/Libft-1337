@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 19:05:16 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/10/27 19:06:10 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/10/27 21:36:48 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,24 @@
 
 void	ft_putnbr_fd(int i, int fd)
 {
-	
+	long	n;
+
+	n = i;
+	if (n < 0)
+	{
+		write (fd, "-", 1);
+		n *= -1;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
+}
+
+#include <stdio.h>
+
+int	main()
+{
+	int k;
+	scanf("%d", &k);
+	ft_putnbr_fd(k, 1);
 }

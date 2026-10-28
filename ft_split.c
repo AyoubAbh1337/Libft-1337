@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                        :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: ayblmouh <ayblmouh@student.1337.ma>       #+#  +:+       +#+         */
+/*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/24 13:28:13 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/25 13:17:58 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/10/28 18:39:47 by ayblmouh        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i])
 		{
-			tab[j] = malloc((countchar(s, i, c) + 1) * sizeof(char)); //ex
+			tab[j] = malloc((countchar(s, i, c) + 1) * sizeof(char));
+			//ex
 			if (!tab[j])
 			{
 				free_tab(tab, j);
