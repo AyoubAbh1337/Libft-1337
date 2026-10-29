@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft.h                                           :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: ayblmouh <ayblmouh@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/16 11:38:22 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/27 19:02:31 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/10/29 17:17:00 by ayblmouh        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ void	*my_memcpy(void *dest, const void *str, size_t n);
 char	*my_strchr(const char *s, int c);
 
 void	ft_putstr_fd(char *s, int fd);
-void	ft_putchar_fd(char , int fd);
+void	ft_putchar_fd(char c, int fd);
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 #endif
