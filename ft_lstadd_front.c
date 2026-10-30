@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 14:12:55 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/10/29 16:57:04 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/10/30 18:41:11 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 
 int	main()
 {
-	t_list *head;
-	t_list *node1;
 	
-	node1 = malloc();
 }
