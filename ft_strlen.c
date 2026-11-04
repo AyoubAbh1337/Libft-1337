@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 09:33:47 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/10/30 09:45:46 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/03 14:10:25 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ size_t	ft_strlen(const char *s)
 	if (!s)
 		return (0);
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	return (i);
 }
-
+/*
 #include <stdio.h>
 
 int	main()
@@ -31,4 +31,4 @@ int	main()
 	char name[] = "hello";
 	printf("%zu", ft_strlen(name));
 	
-}
+}*/

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft.h                                           :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: ayblmouh <ayblmouh@student.1337.ma>       #+#  +:+       +#+         */
+/*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/16 11:38:22 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/31 14:06:43 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/04 20:51:34 by ayblmouh        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -28,16 +34,11 @@ char	*my_strchr(const char *s, int c);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+unsigned int	ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
 
-
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-unsigned int    ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new)
 
 #endif
