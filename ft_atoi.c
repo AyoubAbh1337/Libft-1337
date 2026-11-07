@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_atoi.c                                         :+:      :+:    :+:    */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                   +:+ +:+         +:+      */
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/22 19:09:43 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/28 18:39:41 by ayblmouh        ###   ########.fr        */
+/*   Updated: 2026/11/07 11:50:55 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -39,17 +38,14 @@ int	ft_atoi(const char *nptr)
 	}
 	return ((int)(res * sign));
 }
-
+/*
 int	main(void)
 {
-	int	a;
-
-	atoi(NULL);
-	// printf("%d\n", ft_atoi(NULL));
-	// printf("%d\n", a);
+	printf("%d\n", ft_atoi("-2147483648"));
+	printf("%d\n", atoi("-2147483648"));
 }
 
-/*
+
 printf("%d\n", ft_atoi("42"));
 printf("%d\n", ft_atoi("-42"));
 printf("%d\n", ft_atoi("+57"));

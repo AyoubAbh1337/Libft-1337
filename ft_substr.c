@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_substr.c                                       :+:      :+:    :+:    */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                   +:+ +:+         +:+      */
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/22 17:48:37 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/11/02 20:57:13 by ayblmouh        ###   ########.fr        */
+/*   Updated: 2026/11/07 18:12:05 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	l;
+	size_t	s_len;
 	char	*ptr;
 
 	if (!s)
 		return (NULL);
-	l = ft_strlen(s);
-	if (start >= l)
+	s_len = ft_strlen(s);
+	if (start >= s_len)
 		len = 0;
-	else if (len > l - start)
-		len = l - start;
+	else if (len > s_len - start)
+		len = s_len - start;
 	ptr = malloc(len + 1);
 	if (ptr == NULL)
 		return (NULL);

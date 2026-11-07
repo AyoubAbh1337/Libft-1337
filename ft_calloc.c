@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_calloc.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/20 21:31:27 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/22 17:36:01 by ayblmouh        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/07 15:02:21 by ayblmouh          #+#    #+#             */
+/*   Updated: 2026/11/07 15:02:24 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,17 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	size_t	*ptr;
+	void	*ptr;
+	size_t	res;
 
-	i = 0;
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
+	if (nmemb != 0 && size > (size_t) - 1 / nmemb)
 		return (NULL);
-	while (i < size)
-	{
-		(size_t *) ft_bzero((size_t) ptr, size);
-		i++;
-	}
-	free(ptr);
-	ptr = NULL;
-}
-
-int	main(void)
-{
+	res = nmemb * size;
+	if (res == 0)
+		res = 1;
+	ptr = malloc(res);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, res);
+	return (ptr);
 }

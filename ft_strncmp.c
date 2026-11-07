@@ -6,11 +6,11 @@
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/22 17:27:53 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/22 17:27:57 by ayblmouh        ###   ########.fr        */
+/*   Updated: 2026/11/07 09:16:14 by ayblmouh        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 #include <stdio.h>
 #include <stddef.h>
 

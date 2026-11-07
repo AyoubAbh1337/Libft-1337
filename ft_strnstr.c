@@ -6,7 +6,7 @@
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 14:10:45 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/22 17:35:36 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/07 16:48:10 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-//#include <stdio.h>
-//#include <string.h>
+/*
+#include <stdio.h>
+#include <bsd/string.h>
 
 int	main(void)
 {
 	const char	*largestring = "Foo Bar Baz";
-	const char	*smallstring = "";
+	const char	*smallstring = NULL;
 	char		*ptr;
 
-	ptr = ft_strnstr(largestring, smallstring, sizeof(largestring));
-	printf("%s", ptr);
-}
+//	printf("%s\n", ft_strnstr(largestring, smallstring, sizeof(largestring)));
+	printf("%s\n", strnstr(largestring, smallstring, sizeof(largestring)));
+}*/

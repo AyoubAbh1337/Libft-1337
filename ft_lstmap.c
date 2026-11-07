@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 11:32:10 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/03 12:06:28 by ayblmouh         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   code.c                                            :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/11/04 10:36:15 by ayblmouh         #+#    #+#              */
+/*   Updated: 2026/11/04 21:15:24 by ayblmouh        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*node;
+	t_list	*new_node;
+	t_list	*new_list;
+	void	*cont;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
-	
-	node = ft_lstnew(NULL);
-	if (!node)
-		return (NULL);
-	while(lst)
+	new_list = NULL;
+	while (lst)
 	{
-		node->content = f(lst->content);
+		cont = f(lst->content);
+		new_node = ft_lstnew(cont);
+		if (new_node)
+			ft_lstadd_back(&new_list, new_node);
+		else
+		{
+			del(cont);
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
 		lst = lst->next;
-		content = content->next;
 	}
-	return (node);
+	return (new_list);
 }

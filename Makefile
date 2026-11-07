@@ -1,4 +1,4 @@
-NAME = libft.a
+NAME = libft
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -20,7 +20,7 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS)	#Target : Dependencies
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c $(HEADER)
@@ -34,4 +34,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re
+.PHONY: clean fclean re all

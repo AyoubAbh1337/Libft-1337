@@ -6,9 +6,11 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 09:40:47 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/05 10:03:56 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/07 13:56:13 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
