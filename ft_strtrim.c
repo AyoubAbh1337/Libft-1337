@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 09:39:16 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/07 18:16:19 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:06:47 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	end = len;
-	while (end > start  && ft_strchr(set, s1[end - 1]))
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
-	
 	ptr = malloc(end - start + 1);
 	if (ptr == NULL)
 		return (NULL);
 	ft_memcpy(ptr, s1 + start, end - start);
-	
 	ptr[end - start] = '\0';
 	return (ptr);
 }
-
+/*
 int	main()
 {
 	printf("%s", ft_strtrim("abcxHelloxxworldxabc", "axbc"));
-}
+}*/

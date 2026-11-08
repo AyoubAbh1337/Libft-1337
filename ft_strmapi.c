@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 09:23:36 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/03 10:11:21 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 16:57:49 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 int	main()
 {
-	printf("%s\n", ft_strmapi("Hello world", upper));
-	printf("%s\n", ft_strmapi("Hello world", lower));
+	char *res1 = ft_strmapi("Hello world", upper);
+	char *res2 = ft_strmapi("Hello world", lower);
+
+	printf("%s\n", res1);
+	printf("%s\n", res2);
+	free(res1);
+	free(res2);
+
 }

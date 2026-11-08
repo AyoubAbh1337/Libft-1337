@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 10:41:13 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/06 11:17:41 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:12:45 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		return (NULL);
 	while (i > 0)
 	{
-		if(s[i] == (char)c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i--;
 	}

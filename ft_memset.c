@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 09:40:47 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/07 13:56:13 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:04:09 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;

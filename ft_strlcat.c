@@ -6,7 +6,7 @@
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/06 11:51:14 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/11/07 16:47:40 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:00:01 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	len_dst;
 	size_t	len_src;
-	
+
 	len_dst = 0;
 	while (len_dst < size && dst[len_dst])
 		len_dst++;

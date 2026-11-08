@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 18:35:29 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/10/27 19:04:41 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 18:19:49 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putchar_fd('\n', fd);
 }
 
-int	main()
+int	main(void)
 {
 	ft_putendl_fd("ayoub blmouh his user name is ayblmouh", 1);
 }

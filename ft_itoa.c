@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_itoa.c                                         :+:      :+:    :+:    */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                   +:+ +:+         +:+      */
 /*   By: ayblmouh <ayblmouh@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/26 17:22:24 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/27 17:27:08 by ayblmouh        ###   ########.fr        */
+/*   Updated: 2026/11/08 14:08:58 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	check_sign(long n)
+{
+	int	p;
+
+	p = 0;
+	if (n < 0)
+		p = 1;
+	return (p);
+}
 
 static int	nbr_len(long n)
 {
@@ -32,43 +42,50 @@ static int	nbr_len(long n)
 	return (counter);
 }
 
-char	*ft_itoa(int nb)
+char	*ft_itoa(int n)
 {
-	long	n;
+	long	nb;
 	char	*ptr;
 	int		len;
 	int		p;
-	int		i;
 
-	n = nb;
-	len = nbr_len(n);
+	nb = n;
+	len = nbr_len(nb);
 	ptr = malloc(len + 1);
 	if (!ptr)
 		return (NULL);
-	p = 0;
-	if (n < 0)
-	{
-		ptr[p] = '-';
-		n = -n;
-		p = 1;
-	}
-	i = len;
-	while (i > p)
-	{
-		ptr[i - 1] = (n % 10) + 48;
-		n = n / 10;
-		i--;
-	}
+	p = check_sign(nb);
+	if (p == 1)
+		nb = -nb;
 	ptr[len] = '\0';
+	while (len > p)
+	{
+		ptr[--len] = (nb % 10) + 48;
+		nb = nb / 10;
+	}
+	if (p == 1)
+		ptr[0] = '-';
 	return (ptr);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
 {
-	printf("%s\n", ft_itoa(123));
-	printf("%s\n", ft_itoa(-123));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-2147483648));
-}
+	char *nbr1 = ft_itoa(123);
+	char *nbr2 = ft_itoa(-123);
+	char *nbr3 = ft_itoa(9);
+	char *nbr4 = ft_itoa(-2147483648);
+	char *nbr5 = ft_itoa(2147483647);
+	printf("%s\n", nbr1);
+	printf("%s\n", nbr2);
+	printf("%s\n", nbr3);
+	printf("%s\n", nbr4);
+	printf("%s\n", nbr5);
+	
+	free(nbr1);
+	free(nbr2);
+	free(nbr3);
+	free(nbr4);
+	free(nbr5);
+}*/

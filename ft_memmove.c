@@ -6,7 +6,7 @@
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/05 10:04:36 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/11/07 14:25:06 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:02:48 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	char	src[] = "Hello";
-	char	dest[42];
+	char	dest[42] = "Holas";
 
 	printf("%s\n", (char *) ft_memmove(dest, src, 5));
 }*/

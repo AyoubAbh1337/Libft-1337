@@ -6,7 +6,7 @@
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/22 17:48:37 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/11/07 18:12:05 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:14:49 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -49,4 +49,4 @@ int	main(void)
 		return (1);
 	printf("%s", res);
 	free(res);
-}
+}*/

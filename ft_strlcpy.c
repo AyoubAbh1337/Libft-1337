@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 20:41:00 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/03 21:46:15 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:13:55 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-
+/*
 #include <stdio.h>
 #include <bsd/string.h>
 
@@ -41,4 +41,4 @@ int	main()
 	printf("no: \t");
 	printf("%zu\n", strlcpy(dest, src, 6));
 	printf("%s", dest);
-}
+}*/
