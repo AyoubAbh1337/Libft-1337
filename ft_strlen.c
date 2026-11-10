@@ -31,4 +31,5 @@ int	main()
 	char name[] = "hello";
 	printf("%zu", ft_strlen(name));
 	
-}*/
+}
+*/

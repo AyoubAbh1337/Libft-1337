@@ -6,12 +6,11 @@
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/24 13:28:13 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/11/08 09:55:57 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/09 08:35:29 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	wordcount(const char *word, char sep)
 {
@@ -23,19 +22,19 @@ static int	wordcount(const char *word, char sep)
 	while (word[i] != '\0')
 	{
 		while (word[i] && word[i] == sep)
-			i++;
+		i++;
 		if (word[i] && word[i] != sep)
-			count++;
+		count++;
 		while (word[i] && word[i] != sep)
-			i++;
-	}
-	return (count);
+		i++;
+}
+return (count);
 }
 
 static int	countchar(const char *word, int i, char sep)
 {
 	int	counter;
-
+	
 	counter = 0;
 	while (word[i] && word[i] != sep)
 	{
@@ -48,8 +47,8 @@ static int	countchar(const char *word, int i, char sep)
 static void	free_tab(char **tab, int j)
 {
 	while (j > 0)
-		free(tab[--j]);
-	free(tab);
+	free(tab[--j]);
+free(tab);
 }
 
 char	**ft_split(char const *s, char c)
@@ -58,7 +57,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 	int		k;
-
+	
 	if (!s)
 		return (NULL);
 	i = 0;
@@ -66,7 +65,7 @@ char	**ft_split(char const *s, char c)
 	tab = malloc((wordcount(s, c) + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
-	while (s[i])
+while (s[i])
 	{
 		k = 0;
 		while (s[i] && s[i] == c)
@@ -74,7 +73,6 @@ char	**ft_split(char const *s, char c)
 		if (s[i])
 		{
 			tab[j] = malloc((countchar(s, i, c) + 1) * sizeof(char));
-			//ex
 			if (!tab[j])
 			{
 				free_tab(tab, j);
@@ -94,6 +92,57 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
+#include <stdio.h>
+
+int	main()
+{
+	char	**tab;
+	int		i;
+
+	tab = ft_split("Hello my dreams", ' ');
+	if (!tab)
+		return (1);
+	i = 0;
+	while (tab[i])
+	{
+		printf("tab[%d] = %s\n", i, tab[i]);
+		i++;
+	}
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 int	main(void)
 {
 	int		i;
@@ -117,3 +166,4 @@ int	main(void)
 	free(tab);
 	return (0);
 }
+*/

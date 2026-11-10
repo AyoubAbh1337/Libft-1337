@@ -6,7 +6,7 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>       #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 16:59:42 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/10/31 11:04:17 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/09 09:53:59 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,19 @@ t_list	*ft_lstnew(void *content)
 int	main(void)
 {
 	t_list	*head;
-	t_list	*node1;
+	t_list	*node;
 
-	node1 = ft_lstnew("hi how are you");
+	head = NULL;
 
-	head = node1;
+	node = ft_lstnew(ft_strdup("Hello ayb"));
+	if (!node)
+		return (1);
 
-	printf("%s\n", (char *)node1->content);
-	printf("%s\n", (char *)head->content);
+	head = node;
 
-	free(node1);
+	printf("%s", (char *)head->content);
+
+	free(node);
+	free(head->content);
+	return (0);
 }*/

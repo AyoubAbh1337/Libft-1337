@@ -6,7 +6,7 @@
 /*   By: ayblmouh <marvin@42.fr>                   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/22 17:27:19 by ayblmouh         #+#    #+#              */
-/*   Updated: 2026/11/08 14:11:41 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:59:56 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,4 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		ptr[i++] = s2[j++];
 	ptr[i] = '\0';
 	return (ptr);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*res;
-
-	res = ft_strjoin("Hello ", "World");
-	if (res == NULL)
-		return (1);
-	printf("%s", res);
-	free(res);
 }

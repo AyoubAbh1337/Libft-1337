@@ -25,7 +25,7 @@ $(NAME): $(OBJS)	#Target : Dependencies
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
-
+                            #^Patternrule
 clean:
 	rm -f $(OBJS)
 

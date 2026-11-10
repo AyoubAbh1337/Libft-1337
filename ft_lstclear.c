@@ -6,12 +6,17 @@
 /*   By: ayblmouh <ayblmouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 08:42:43 by ayblmouh          #+#    #+#             */
-/*   Updated: 2026/11/03 09:15:12 by ayblmouh         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:27:14 by ayblmouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
+void	del(void *x)
+{
+	free(x);
+}
+*/
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
@@ -29,41 +34,28 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
-
+/*
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "libft.h"
 
-// دالة حذف مخصصة لمحتوى العقد (بما أننا سنستخدم strdup سنقوم بـ free للمحتوى)
-void    del_content(void *content)
+int	main()
 {
-    free(content);
-}
+	t_list	*head;
+	t_list	*node1;
+	t_list	*node2;
 
-int main(void)
-{
-    t_list  *lst;
-    t_list  *node1;
-    t_list  *node2;
-    t_list  *node3;
+	head = NULL;
+	
+	node1 = ft_lstnew(ft_strdup("Hello"));
+	node2 = ft_lstnew(ft_strdup("Anoual"));
 
-    // إنشاء بعض العقد مع تخصيص ذاكرة للمحتوى
-    node1 = ft_lstnew(strdup("Test 1"));
-    node2 = ft_lstnew(strdup("Test 2"));
-    node3 = ft_lstnew(strdup("Test 3"));
+	if (!node1 || !node2)
+		return (1);
 
-    // ربط العقد ببعضها لتكوين القائمة
-    node1->next = node2;
-    node2->next = node3;
-    lst = node1;
-
-    printf("Before clear - lst address: %p\n", (void *)lst);
-
-    // استدعاء دالة ft_lstclear
-    ft_lstclear(&lst, &del_content);
-
-    printf("After clear - lst address: %p (should be 0/NULL)\n", (void *)lst);
-
-    return (0);
-}
+	head = node1;
+	node1->next = node2;
+	
+	ft_lstclear(&head, del);
+	return (0);
+//	printf("%s\n", (char *)head->content);
+//	printf("%s\n", (char *)head->next->content);
+}*/
